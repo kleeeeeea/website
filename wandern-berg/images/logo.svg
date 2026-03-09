@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 190" role="img" aria-labelledby="title desc">
+  <title id="title">Wandern Berg Logo</title>
+  <desc id="desc">Grauer Kreis mit gelber Linie, blauen Berglinien und Text Natur erleben</desc>
+  <circle cx="95" cy="95" r="92" fill="#e7e7e7" />
+  <path d="M128 34 C94 20 56 33 37 64 C27 81 25 106 35 126" fill="none" stroke="#f1c400" stroke-width="5" stroke-linecap="round"/>
+  <path d="M58 112 L82 78 L93 92 L114 53 L130 88" fill="none" stroke="#294a9e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 126 L68 100" fill="none" stroke="#294a9e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M130 88 L132 119" fill="none" stroke="#294a9e" stroke-width="5" stroke-linecap="round"/>
+  <text x="50" y="97" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1f1f1f">Natur</text>
+  <text x="91" y="121" font-family="'Source Sans 3', Arial, sans-serif" font-size="32" fill="#1f1f1f">erleben</text>
+</svg>
