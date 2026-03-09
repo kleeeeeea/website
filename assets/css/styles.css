@@ -74,10 +74,37 @@ img {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   font-family: 'Lora', Georgia, serif;
   font-weight: 700;
   color: var(--forest-deep);
   letter-spacing: 0.01em;
+}
+
+.brand-logo-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(48, 66, 57, 0.2);
+  background: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(34, 41, 36, 0.12);
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.brand-text-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
 .brand small {
@@ -434,6 +461,16 @@ img {
 @media (max-width: 680px) {
   body {
     font-size: 17px;
+  }
+
+  .brand-logo-wrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
   }
 
   .hero {
