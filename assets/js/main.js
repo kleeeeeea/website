@@ -46,13 +46,23 @@ function setupDropdowns() {
 }
 
 function markActiveLinks() {
-  const current = location.pathname.split('/').pop() || 'index.html';
+  const currentPath = normalizePath(location.pathname);
   document.querySelectorAll('a[data-nav-link]').forEach((link) => {
-    const href = link.getAttribute('href') || '';
-    if (href.endsWith(current)) {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    const targetPath = normalizePath(new URL(href, location.href).pathname);
+    if (targetPath === currentPath) {
       link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
     }
   });
+}
+
+function normalizePath(pathname) {
+  const normalized = pathname.replace(/\/+$/, '');
+  return normalized === '' ? '/index.html' : normalized;
 }
 
 function setYear() {
