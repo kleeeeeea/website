@@ -421,18 +421,20 @@ img {
 .home-hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.78fr);
-  gap: 1.5rem;
-  align-items: center;
+  grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.18fr);
+  gap: 2rem;
+  align-items: end;
 }
 
 .home-hero-copy {
-  padding: 3.4rem 0 3rem;
+  padding: 2.4rem 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .home-hero-copy h1 {
   margin: 0;
-  max-width: 9ch;
+  max-width: 8ch;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(4rem, 8vw, 7rem);
   line-height: 0.9;
@@ -446,20 +448,62 @@ img {
   color: #485343;
 }
 
-.home-contact {
-  position: relative;
-  background: linear-gradient(180deg, rgba(255, 252, 245, 0.98) 0%, rgba(241, 236, 222, 0.98) 100%);
-  border-radius: 28px 28px 28px 8px;
-  transform: translateY(18px) rotate(-1.4deg);
+.home-signature {
+  margin: 1.35rem 0 0;
+  color: #6f755d;
+  font-style: italic;
 }
 
-.home-contact::before {
+.home-stage {
+  position: relative;
+  min-height: 620px;
+  padding: 1.2rem 1.2rem 1.4rem;
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.95) 0%, rgba(237, 229, 212, 0.95) 100%);
+  border: 1px solid rgba(105, 121, 84, 0.18);
+  box-shadow: var(--shadow);
+}
+
+.home-stage::before {
   content: "";
   position: absolute;
-  inset: 14px;
-  border: 1px solid rgba(113, 135, 93, 0.18);
-  border-radius: 22px 22px 22px 6px;
-  pointer-events: none;
+  inset: 16px;
+  border-radius: 26px;
+  border: 1px solid rgba(120, 130, 92, 0.18);
+}
+
+.home-stage-photo {
+  position: absolute;
+  inset: 1.2rem 1.2rem 8.8rem 1.2rem;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(26, 38, 28, 0.08), rgba(26, 38, 28, 0.24)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;
+  box-shadow: inset 0 0 0 1px rgba(255, 250, 240, 0.18);
+}
+
+.home-note {
+  position: absolute;
+  left: -2.2rem;
+  bottom: 2.2rem;
+  width: min(300px, 82%);
+  padding: 1.15rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #6c8d78 0%, #4f6f5b 100%);
+  color: #f4efe5;
+  box-shadow: 0 18px 30px rgba(50, 65, 53, 0.2);
+}
+
+.home-note-title {
+  margin: 0 0 0.35rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff8ef;
+}
+
+.home-note p:last-child {
+  margin-bottom: 0;
 }
 
 .home-story,
@@ -498,6 +542,69 @@ img {
 .story-card-accent .feature-list li {
   background: rgba(255, 255, 255, 0.09);
   border-left-color: #e8e3d4;
+}
+
+.home-portrait-section {
+  padding-top: 0;
+}
+
+.home-portrait-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.78fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.portrait-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.88fr) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: stretch;
+  background: rgba(255, 252, 245, 0.72);
+  border: 1px solid rgba(138, 145, 107, 0.18);
+  border-radius: 30px;
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.portrait-panel-image {
+  min-height: 320px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(42, 53, 36, 0.08), rgba(42, 53, 36, 0.18)),
+    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.portrait-panel-copy {
+  padding: 0.5rem 0.45rem 0.35rem;
+}
+
+.journey-markers {
+  position: relative;
+  padding: 1.5rem;
+  background: rgba(245, 239, 226, 0.88);
+  border: 1px solid rgba(126, 135, 101, 0.2);
+  border-radius: 28px 10px 28px 28px;
+  box-shadow: var(--shadow);
+}
+
+.journey-markers::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(181, 138, 91, 0.45);
+}
+
+.journey-markers-title {
+  margin: 0 0 0.8rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--dark-green);
 }
 
 .handicap-intro h1 {
@@ -794,12 +901,23 @@ img {
   .home-hero-grid,
   .prose-layout,
   .contact-layout,
+  .home-portrait-grid,
   .handicap-layout {
     grid-template-columns: 1fr;
   }
 
-  .home-contact {
-    transform: none;
+  .portrait-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stage {
+    min-height: 520px;
+  }
+
+  .home-note {
+    left: 1.2rem;
+    right: 1.2rem;
+    width: auto;
   }
 
   .handicap-contact {
@@ -831,6 +949,24 @@ img {
 
   .home-hero-copy h1 {
     font-size: clamp(3.3rem, 14vw, 5rem);
+  }
+
+  .home-stage {
+    min-height: 440px;
+    padding: 0.95rem 0.95rem 6.6rem;
+  }
+
+  .home-stage::before {
+    inset: 12px;
+  }
+
+  .home-stage-photo {
+    inset: 0.95rem 0.95rem 6.4rem 0.95rem;
+  }
+
+  .home-note {
+    bottom: 1rem;
+    border-radius: 28px;
   }
 
   .section {
