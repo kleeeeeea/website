@@ -244,6 +244,27 @@ h2 {
   padding: 1.1rem;
 }
 
+.handicap-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.9fr);
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.handicap-content {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.handicap-sidebar {
+  position: sticky;
+  top: 108px;
+}
+
+.handicap-contact-title {
+  margin-top: 1.5rem;
+}
+
 .info-box h3 {
   margin-top: 0;
 }
@@ -290,6 +311,14 @@ h2 {
 @media (max-width: 1030px) {
   .card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .handicap-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .handicap-sidebar {
+    position: static;
   }
 }
 

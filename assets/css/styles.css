@@ -329,6 +329,48 @@ img {
   padding: 0.76rem 0.95rem;
 }
 
+.handicap-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.95fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.handicap-intro h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.handicap-eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--accent-green);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.handicap-lead {
+  margin-top: 1rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--dark-green);
+  line-height: 1.5;
+}
+
+.handicap-grid {
+  margin-top: 1.5rem;
+}
+
+.handicap-contact {
+  position: sticky;
+  top: 122px;
+}
+
+.handicap-contact h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
 .banner {
   margin-top: 24px;
   min-height: 44vh;
@@ -551,6 +593,14 @@ img {
   .grid-2,
   .travel-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .handicap-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .handicap-contact {
+    position: static;
   }
 }
 
